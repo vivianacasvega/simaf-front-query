@@ -120,13 +120,6 @@ const Navbar = props => {
                     <i className="bx bx-home-circle me-2 mr-2"></i>
                     Inicio <div className="arrow-down"></div>
                   </Link>
-                  <div
-                    className={classname("dropdown-menu", { show: dashboard })}
-                  >
-                    <Link to="/dashboard" className="dropdown-item">
-                      Link 1
-                    </Link>
-                  </div>
                 </li>
                 <li className="nav-item dropdown">
                   <Link
@@ -138,7 +131,7 @@ const Navbar = props => {
                     className="nav-link dropdown-togglez arrow-none"
                   >
                     <i className="bx bx-customize me-2 mr-2"></i>
-                    Prueba 1 <div className="arrow-down"></div>
+                    CVTOOLS <div className="arrow-down"></div>
                   </Link>
                   <div className={classname("dropdown-menu", { show: app })}>
                     <div className="dropdown">
@@ -150,71 +143,8 @@ const Navbar = props => {
                           setemail(!email);
                         }}
                       >
-                        Link 2 <div className="arrow-down"></div>
+                        General <div className="arrow-down"></div>
                       </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: email })}
-                      >
-                        <Link to="/email-inbox" className="dropdown-item">
-                          Sublink 1
-                        </Link>
-                        <Link to="/email-read" className="dropdown-item">
-                          Sublink 2
-                        </Link>
-                        <div className="dropdown">
-                          <Link
-                            className="dropdown-item dropdown-toggle arrow-none"
-                            to="/#"
-                            onClick={e => {
-                              e.preventDefault();
-                              setemail(!email);
-                            }}
-                          >
-                            <span key="t-email-templates">Templates</span>{" "}
-                            <div className="arrow-down"></div>
-                          </Link>
-                          <div
-                            className={classname("dropdown-menu", {
-                              show: email,
-                            })}
-                          >
-                            <Link
-                              to="/email-template-basic"
-                              className="dropdown-item"
-                            >
-                              SubLink nivel 2
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setecommerce(!ecommerce);
-                        }}
-                      >
-                        Link 3 {" "}
-                        <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: ecommerce,
-                        })}
-                      >
-                        <Link to="/ecommerce-products" className="dropdown-item">
-                          SubLInk 4
-                        </Link>
-                        <Link
-                          to="/ecommerce-product-detail/1"
-                          className="dropdown-item"
-                        >
-                          SubLInk 5
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </li>
@@ -228,7 +158,7 @@ const Navbar = props => {
                     }}
                   >
                     <i className="bx bx-collection me-2 mr-2"></i> {" "}
-                    CVTOOLS <div className="arrow-down"></div>
+                    GEEM <div className="arrow-down"></div>
                   </Link>
                   <div
                     className={classname("dropdown-menu", { show: component })}
@@ -242,15 +172,44 @@ const Navbar = props => {
                           setform(!form);
                         }}
                       >
-                        Link 6 <div className="arrow-down"></div>
+                        PQRS <div className="arrow-down"></div>
                       </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: form })}
+                    </div>
+                    <div className="dropdown">
+                      <Link
+                        to="/#"
+                        className="dropdown-item dropdown-toggle arrow-none"
+                        onClick={e => {
+                          e.preventDefault();
+                          setform(!form);
+                        }}
                       >
-                        <Link to="/form-elements" className="dropdown-item">
-                          SubLink 7
-                        </Link>
-                      </div>
+                        PSNC <div className="arrow-down"></div>
+                      </Link>
+                    </div>
+                    <div className="dropdown">
+                      <Link
+                        to="/#"
+                        className="dropdown-item dropdown-toggle arrow-none"
+                        onClick={e => {
+                          e.preventDefault();
+                          setform(!form);
+                        }}
+                      >
+                        TARJETAS <div className="arrow-down"></div>
+                      </Link>
+                    </div>
+                    <div className="dropdown">
+                      <Link
+                        to="/#"
+                        className="dropdown-item dropdown-toggle arrow-none"
+                        onClick={e => {
+                          e.preventDefault();
+                          setform(!form);
+                        }}
+                      >
+                        HALLAZGOS <div className="arrow-down"></div>
+                      </Link>
                     </div>
                   </div>
                 </li>
@@ -264,54 +223,21 @@ const Navbar = props => {
                     }}
                   >
                     <i className="bx bx-file me-2 mr-2"></i>
-                    Prueba 2<div className="arrow-down"></div>
+                    GPORTALS<div className="arrow-down"></div>
                   </Link>
-                  <div className={classname("dropdown-menu", { show: extra })}>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setinvoice(!invoice);
-                        }}
-                      >
-                        Link 8 <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", {
-                          show: invoice,
-                        })}
-                      >
-                        <Link to="/invoices-list" className="dropdown-item">
-                          Sublink 10
-                        </Link>
-                        <Link to="/invoices-detail" className="dropdown-item">
-                          Sublink 11
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="dropdown">
-                      <Link
-                        to="/#"
-                        className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setauth(!auth);
-                        }}
-                      >
-                        Link 9 {" "}
-                        <div className="arrow-down"></div>
-                      </Link>
-                      <div
-                        className={classname("dropdown-menu", { show: auth })}
-                      >
-                        <Link to="/pages-login" className="dropdown-item">
-                          Sublink 12
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    to="/#"
+                    onClick={e => {
+                      e.preventDefault();
+                      setextra(!extra);
+                    }}
+                  >
+                    <i className="bx bx-file me-2 mr-2"></i>
+                    PARAMETRIZACION<div className="arrow-down"></div>
+                  </Link>
                 </li>
               </ul>
             </Collapse>

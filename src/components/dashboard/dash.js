@@ -25,17 +25,10 @@ const Dash = (props) => {
   return (
     <>
       <Row>
-        <CardUser id={getItem("userId")} />
-        <Col xl="8">
-          {/* card welcome */}
-          <CardWelcome />
-        </Col>
        
       </Row>
       <Row>
-        <Col xl="12">
-          <GeneralTable/> 
-        </Col>
+        
       </Row>
     </>
   );
