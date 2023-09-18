@@ -37,73 +37,73 @@ const Dash = (props) => {
     <>
       {/* Indicadores mantenimiento gerenciales */}
       <Row>
-            <Col lg={12}>
-              <Card>
-                <CardBody>
-                  <CardTitle className="mb-4">
-                    Mantenimientos Acumulados
-                  </CardTitle>
-                    <MantIndicatorsMonth />
-                  <Row>
-                    <Col lg={6}>
-                      <LineApexChart />
-                    </Col>
-                    <Col lg={6}>
-                      <RadialChartMant 
-                      />
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+        <Col lg={12}>
+          <Card>
+            <CardBody>
+              <CardTitle className="mb-4">
+                Mantenimientos Acumulados
+              </CardTitle>
+              <MantIndicatorsMonth />
+              <Row>
+                <Col lg={6}>
+                  <LineApexChart />
+                </Col>
+                <Col lg={6}>
+                  <RadialChartMant
+                  />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
 
-           {/* Indicadores Toolstrings y trabajos realizados */}
-           <Row>
-            <Col lg={12}>
-              <Card>
-                <CardBody>
-                  <CardTitle className="mb-4">
-                    Indicadores Operativos
-                  </CardTitle>
-                  <Row>
-                    <WorksIndicatorsMonth />
-                  </Row>
-                  <Row>
-                    <Col lg={6}>
-                      <ColumnWithDataLabels />
-                    </Col>
-                    <Col lg={6}>
-                      <RadialChartWorks />
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+      {/* Indicadores Toolstrings y trabajos realizados */}
+      <Row>
+        <Col lg={12}>
+          <Card>
+            <CardBody>
+              <CardTitle className="mb-4">
+                Indicadores Operativos
+              </CardTitle>
+              <Row>
+                <WorksIndicatorsMonth />
+              </Row>
+              <Row>
+                <Col lg={6}>
+                  <ColumnWithDataLabels />
+                </Col>
+                <Col lg={6}>
+                  <RadialChartWorks />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
 
-          {/* Indicadores Inventario */}
-          <Row>
-            <Col lg={12}>
-              <Card>
-                <CardBody>
-                  <CardTitle className="mb-4">
-                    Indicadores Hojas de Vida
-                  </CardTitle>
-                    <ToolsIndicatorsMonth />
-                  <Row>
-                    <Col lg={6}>
-                      <BarChart />
-                    </Col>
-                    <Col lg={6}>
-                    <RadialChartTools 
-                      />
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+      {/* Indicadores Inventario */}
+      <Row>
+        <Col lg={12}>
+          <Card>
+            <CardBody>
+              <CardTitle className="mb-4">
+                Indicadores Hojas de Vida
+              </CardTitle>
+              <ToolsIndicatorsMonth />
+              <Row>
+                <Col lg={6}>
+                  <BarChart />
+                </Col>
+                <Col lg={6}>
+                  <RadialChartTools
+                  />
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
 
     </>
   );

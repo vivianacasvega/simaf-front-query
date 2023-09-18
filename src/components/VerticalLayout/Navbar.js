@@ -51,6 +51,10 @@ const Navbar = props => {
     }
   });
 
+  const redirect = () => {
+    window.location = 'https://www.maximfishing.solutions/dashboard'
+  }
+
   const removeActivation = items => {
     for (var i = 0; i < items.length; ++i) {
       var item = items[i];
@@ -111,23 +115,26 @@ const Navbar = props => {
                 <li className="nav-item dropdown">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={e => {
-                      e.preventDefault();
-                      setdashboard(!dashboard);
-                    }}
-                    to="/dashboard"
+                   
+                    to="/"
                   >
                     <i className="bx bx-home-circle me-2 mr-2"></i>
-                    Inicio <div className="arrow-down"></div>
+                    INICIO <div className="arrow-down"></div>
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
                   <Link
+                    className="nav-link dropdown-toggle arrow-none"
+                    onClick={() => redirect()}
                     to="/#"
-                    onClick={e => {
-                      e.preventDefault();
-                      setapp(!app);
-                    }}
+                  >
+                    <i className="bx bxs-home me-2 mr-2"></i>
+                    MENÚ PRINCIPAL <div className="arrow-down"></div>
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    to="/dash-cvtools"
                     className="nav-link dropdown-togglez arrow-none"
                   >
                     <i className="bx bx-customize me-2 mr-2"></i>
@@ -136,14 +143,10 @@ const Navbar = props => {
                   <div className={classname("dropdown-menu", { show: app })}>
                     <div className="dropdown">
                       <Link
-                        to="/#"
+                        to="/dash-cvtools"
                         className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setemail(!email);
-                        }}
                       >
-                        General <div className="arrow-down"></div>
+                        General
                       </Link>
                     </div>
                   </div>
@@ -152,10 +155,6 @@ const Navbar = props => {
                   <Link
                     to="/#"
                     className="nav-link dropdown-toggle arrow-none"
-                    onClick={e => {
-                      e.preventDefault();
-                      setcomponent(!component);
-                    }}
                   >
                     <i className="bx bx-collection me-2 mr-2"></i> {" "}
                     GEEM <div className="arrow-down"></div>
@@ -165,50 +164,34 @@ const Navbar = props => {
                   >
                     <div className="dropdown">
                       <Link
-                        to="/#"
+                        to="/dash-pqrs"
                         className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setform(!form);
-                        }}
                       >
-                        PQRS <div className="arrow-down"></div>
+                        PQRS 
                       </Link>
                     </div>
                     <div className="dropdown">
                       <Link
-                        to="/#"
+                        to="/dash-psnc"
                         className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setform(!form);
-                        }}
                       >
-                        PSNC <div className="arrow-down"></div>
+                        PSNC 
                       </Link>
                     </div>
                     <div className="dropdown">
                       <Link
-                        to="/#"
+                        to="/dash-tarjetas"
                         className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setform(!form);
-                        }}
                       >
-                        TARJETAS <div className="arrow-down"></div>
+                        TARJETAS 
                       </Link>
                     </div>
                     <div className="dropdown">
                       <Link
-                        to="/#"
+                        to="/dash-hallazgos"
                         className="dropdown-item dropdown-toggle arrow-none"
-                        onClick={e => {
-                          e.preventDefault();
-                          setform(!form);
-                        }}
                       >
-                        HALLAZGOS <div className="arrow-down"></div>
+                        HALLAZGOS 
                       </Link>
                     </div>
                   </div>
@@ -216,28 +199,40 @@ const Navbar = props => {
                 <li className="nav-item dropdown">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    to="/#"
-                    onClick={e => {
-                      e.preventDefault();
-                      setextra(!extra);
-                    }}
+                    to="/dash-gportal"
                   >
                     <i className="bx bx-file me-2 mr-2"></i>
                     GPORTALS<div className="arrow-down"></div>
                   </Link>
+                  <div className={classname("dropdown-menu", { show: app })}>
+                    <div className="dropdown">
+                      <Link
+                        to="/dash-gportal"
+                        className="dropdown-item dropdown-toggle arrow-none"
+                      >
+                        General
+                      </Link>
+                    </div>
+                  </div>
                 </li>
                 <li className="nav-item dropdown">
                   <Link
                     className="nav-link dropdown-toggle arrow-none"
-                    to="/#"
-                    onClick={e => {
-                      e.preventDefault();
-                      setextra(!extra);
-                    }}
+                    to="/dash-parametrizacion"
                   >
                     <i className="bx bx-file me-2 mr-2"></i>
                     PARAMETRIZACION<div className="arrow-down"></div>
                   </Link>
+                  <div className={classname("dropdown-menu", { show: app })}>
+                    <div className="dropdown">
+                      <Link
+                        to="/dash-parametrizacion"
+                        className="dropdown-item dropdown-toggle arrow-none"
+                      >
+                        General
+                      </Link>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </Collapse>

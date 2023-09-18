@@ -14,11 +14,9 @@ import {
   CardFooter,
   Button,
 } from "reactstrap";
+import BaseView from '../../components/utils/BaseView';
 
-import CardUser from "./card-user";
-import CardWelcome from "./card-welcome";
 import { getItem } from "../../utils/index";
-//import ApprovalsTable from "../parameterization/approvals/ApprovalsTable"
 import GeneralTable from "../parameterization/general/GeneralTable";
 
 import LineApexChart from "../AllCharts/apex/chartapex";
@@ -28,16 +26,17 @@ import RadialChartWorks from "../AllCharts/apex/RadialChart_works";
 import ColumnWithDataLabels from "../AllCharts/apex/ColumnWithDataLabels";
 import BarChart from "../AllCharts/apex/barchart";
 
-const DashPQRS = (props) => {
+const DashFinding = (props) => {
   return (
     <>
-      {/* Aqui van los dash de PQRS */}
-      <Row>
-            
-        </Row>
+      <BaseView>
+        {/* Aqui van los dash de de hallazgos */}
+        <Row>
 
+        </Row>
+      </BaseView >
     </>
   );
 };
 
-export default DashPQRS;
+export default DashFinding;
