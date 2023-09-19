@@ -18,6 +18,8 @@ import {
 } from "reactstrap";
 import BaseView from '../../components/utils/BaseView';
 import classnames from "classnames";
+import "react-datepicker/dist/react-datepicker.css";
+import API from "../../api";
 
 import { getItem } from "../../utils/index";
 import GeneralTable from "../parameterization/general/GeneralTable";
