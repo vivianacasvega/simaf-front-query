@@ -153,7 +153,7 @@ const Navbar = props => {
                 </li>
                 <li className="nav-item dropdown">
                   <Link
-                    to="/#"
+                    to="/dash-geem-general"
                     className="nav-link dropdown-toggle arrow-none"
                   >
                     <i className="bx bx-collection me-2 mr-2"></i> {" "}

@@ -40,7 +40,7 @@ import FormFindIndicatorsControl from "../utils/FormFindIndicatorsControl";
 import BarChartStatusControl from "../../components/AllCharts/apex/barchartStatusControl";
 import TableUsersControl from "../../components/Tables/TableUsersControl";
 
-const DashPQRS = (props) => {
+const DashGeemGeneral = (props) => {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggleTab = tab => {
@@ -54,58 +54,55 @@ const DashPQRS = (props) => {
       <BaseView>
         {/* Pestañas */}
         <Row>
-          <Col lg="12">
+          <Col lg={12}>
             <Card>
               <CardBody>
                 <CardTitle className="mb-4">
-                  DASHBOARD INDICADORES PQRS
+                  Indicadores no gestión
                 </CardTitle>
-                <IndicatorsMonth
-                  name={"PQRS"}
-                  type={1}
-                />
                 <Row>
                   <Col lg={12}>
-                    <ChartApexGeem
-                      label={"Acumulado por mes PQRS"}
-                      type={1}
+                    <BarChartStatusControl
+                      type={3}
                     />
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg={6}>
-                    <BarChartStatus
-                      type={1}
-                    />
+                  <Col lg={12}>
+                    <TableUsersControl />
                   </Col>
-                  <Col lg={6}>
-                    <PieChartGeem
-                      opt={1}
-                      opt2={1}
+                </Row>
+                <Row>
+                  <Col lg={12}>
+                    <BarChartStatusControl
+                      type={3}
                     />
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg={6}>
-                    <PieChartGeem
-                      opt={1}
-                      opt2={2}
+                  <Col lg={12}>
+                    <TableUsersControl />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col lg={12}>
+                    <BarChartStatusControl
+                      type={3}
                     />
                   </Col>
-                  <Col lg={6}>
-                    <PieChartGeem
-                      opt={1}
-                      opt2={3}
-                    />
+                </Row>
+                <Row>
+                  <Col lg={12}>
+                    <TableUsersControl />
                   </Col>
                 </Row>
               </CardBody>
             </Card>
           </Col>
         </Row>
-      </BaseView >
+      </BaseView>
     </>
   );
 };
 
-export default DashPQRS;
+export default DashGeemGeneral;

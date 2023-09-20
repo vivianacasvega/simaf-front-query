@@ -1,4 +1,3 @@
-import { getStaticContextFromError } from "@remix-run/router";
 import React, { useEffect } from "react"
 import ReactApexChart from "react-apexcharts"
 

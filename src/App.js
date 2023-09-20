@@ -14,7 +14,8 @@ import DashPSNC from './components/dashboardPSNC/dashpsnc';
 import DashPQRS from './components/dashboardPQRS/dashpqrs'; 
 import DashFinding from './components/dashboardFinding/dashfinding'; 
 import DashGportal from './components/dashboardGportal/dashgportal'; 
-import DashGeneral from './components/dashboardGeneral/dashgeneral'; 
+import DashGeemGeneral from './components/dashboardGeemGeneral/dashgeemgeneral';
+import DashGeneral from './components/dashboardGeneral/dashgeneral';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <Route exact path='/dash-hallazgos' element={<DashFinding/>} />
         <Route exact path='/dash-gportal' element={<DashGportal/>} />
         <Route exact path='/dash-parametrizacion' element={<DashGeneral/>} />
+        <Route exact path='/dash-geem-general' element={<DashGeemGeneral/>} />
         
       </Routes>
     </BrowserRouter>
